@@ -61,7 +61,7 @@
         //    // actually used.
         //    .lazy = false,
         //},
-        .ecs = .{ .path = "ecs" },
+        .ECS = .{ .path = "ecs" },
     },
     // Specifies the set of files and directories that are included in this package.
     // Only files and directories listed here are included in the `hash` that
@@ -75,6 +75,7 @@
         "build.zig",
         "build.zig.zon",
         "src",
+        "LICENSE",
         // For example...
         //"LICENSE",
         //"README.md",

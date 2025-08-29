@@ -1,10 +1,10 @@
 const std = @import("std");
-const My_Programming_Language = @import("My_Programming_Language");
+const Booplang = @import("Booplang");
 
 pub fn main() !void {
     // Prints to stderr, ignoring potential errors.
     std.debug.print("All your {s} are belong to us.\n", .{"codebase"});
-    try My_Programming_Language.bufferedPrint();
+    try Booplang.bufferedPrint();
 }
 
 test "simple test" {

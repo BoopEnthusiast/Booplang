@@ -8,7 +8,7 @@ entities: std.ArrayList(Entity),
 components: std.AutoArrayHashMap([]const type, std.ArrayList(Entity)),
 
 pub fn init(allocator: std.mem.Allocator) Context {
-    return Context{
+    return .{
         .allocator = allocator,
         .entities = std.ArrayList(Entity).empty,
     };
@@ -35,8 +35,12 @@ pub fn createEntity(self: *Context, allocator: std.mem.Allocator) std.mem.Alloca
     return self.entities.items[self.entities.items.len - 1];
 }
 
-fn newComponent(id: usize, component: *Component) void {}
+// fn newComponent(id: usize, component: *Component) void {}
 
-fn removedComponent(id: usize, component: *Component) void {}
+//fn removedComponent(id: usize, component: *Component) void {}
 
-pub fn createSystem(self: *Context, comptime components: []const type) void {}
+// pub fn createSystem(self: *Context, comptime components: []const type) void {}
+
+test "Something or rather" {
+    std.debug.print("Hiii!", null);
+}

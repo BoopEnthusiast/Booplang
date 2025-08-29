@@ -15,16 +15,9 @@
     // package is first created, and then *never changes*. This allows
     // unambiguous detection of one package being an updated version of
     // another.
-    //
-    // When forking a Zig project, this id should be regenerated (delete the
-    // field and run `zig build`) if the upstream project is still maintained.
-    // Otherwise, the fork is *hostile*, attempting to take control over the
-    // original project's identity. Thus it is recommended to leave the comment
-    // on the following line intact, so that it shows up in code reviews that
-    // modify the field.
-    .fingerprint = 0xa0268ab1ac38461e, // Changing this has security and trust implications.
-    // Tracks the earliest Zig version that the package considers to be a
     // supported use case.
+    .fingerprint = 0xa0268ab1941f10e5,
+
     .minimum_zig_version = "0.15.1",
     // This field is optional.
     // Each dependency must either provide a `url` and `hash`, or a `path`.
@@ -71,11 +64,7 @@
     // the build root itself.
     // A directory listed here means that all files within, recursively, are included.
     .paths = .{
-        "build.zig",
-        "build.zig.zon",
-        "root.zig",
-        // For example...
-        //"LICENSE",
-        //"README.md",
+        "",
+        "../LICENSE",
     },
 }
