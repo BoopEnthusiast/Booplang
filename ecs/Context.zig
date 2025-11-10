@@ -28,6 +28,7 @@ pub fn createEntity(self: *Context, allocator: std.mem.Allocator) std.mem.Alloca
     };
     const entity = Entity.init(
         self.entities.items.len,
+        self,
         allocator,
         vtable,
     );
@@ -35,12 +36,10 @@ pub fn createEntity(self: *Context, allocator: std.mem.Allocator) std.mem.Alloca
     return self.entities.items[self.entities.items.len - 1];
 }
 
-// fn newComponent(id: usize, component: *Component) void {}
+fn newComponent(self: *Context, id: usize, component: *Component) void {}
 
-//fn removedComponent(id: usize, component: *Component) void {}
+fn removedComponent(self: *Context, id: usize, component: *Component) void {}
 
-// pub fn createSystem(self: *Context, comptime components: []const type) void {}
+fn getComponentListsWithType(comptime T: type) ?[]type {}
 
-test "Something or rather" {
-    std.debug.print("Hiii!", null);
-}
+pub fn createSystem(self: *Context, comptime components: []const type) void {}
